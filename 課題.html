@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>課題m07</title>
+</head>
+<body>
+<h1>課題m07</h1>
+<button name="calcButton" onclick="doCalc();">結果の表示</button>
+
+<div id="ans"></div>
+<script type="text/javascript">
+    function doCalc() {
+        let num= [];
+for(let i=0; i<100; i++) {
+  num[i] = i+1;
+}
+num[0] = undefined;
+for(let j=1; j<num.length; j++){
+  for(let i=j+1; i<num.length; i++){
+    if (num[i] % num[j] == 0) {
+      num[i] = undefined;
+    } else {
+    }
+  }
+}
+num;
+
+for(let i=0; i<num.length; i++){
+  if (num[i] > 0) {
+    ans(num[i]);
+  }
+}
+
+    }
+	ans = function (log) {
+document.getElementById('ans').innerHTML += log + "<br>";
+}
+
+</script>
+<noscript>JavaScriptが利用できないブラウザです</noscript>
+</body>
+</html>
